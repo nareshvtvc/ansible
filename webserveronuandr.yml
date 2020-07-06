@@ -1,6 +1,6 @@
 ---
-- hosts: webservers 
-  become: 172.31.32.78,172.31.40.18
+- hosts: 172.31.32.78,172.31.40.18
+  become: yes
   tasks:
    - name: i want to install webserver on ubuntu16
      apt:

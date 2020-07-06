@@ -4,13 +4,13 @@
   tasks:
    - name: i want to install webserver on ubuntu16
      apt:
-        name: webserveronubuntu
+        name: "webserveronubuntu"
         state: present
      when: ansible_os_family== "Debian"
 
    - name: i want to install webserver on Redhat
      yum:
-        name: webserveronredhat
+        name: "webserveronredhat"
         state: present
      when: ansible_os_family== "RedHat"
 

@@ -8,20 +8,9 @@
         state: present
      when: ansible_os_family== "Debian"
 
-   - name: i want to start webserver on ubuntu16
-     service:
-        name: "{{webserveronubuntu}}"
-        state: started
-     when: ansible_os_family== "Debian"
-
    - name: i want to install webserver on Redhat
      yum:
         name: "{{webserveronredhat}}"
         state: present
      when: ansible_os_family== "RedHat"
 
-   - name: i want to start webserver on Redhat
-     service:
-        name: "{{webserveronredhat}}"
-        state: started
-     when: ansible_os_family== "RedHat"

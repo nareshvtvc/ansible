@@ -1,27 +1,27 @@
 ---
 - hosts: webservers 
-  become: yes
+  become: 172.31.32.78,172.31.40.18
   tasks:
    - name: i want to install webserver on ubuntu16
      apt:
-        name: "{{webserveronubuntu}}"
+        name: "apache2"
         state: present
      when: ansible_os_family== "Debian"
 
    - name: i want to start webserver on ubuntu16
      service:
-        name: "{{webserveronubuntu}}"
+        name: "apache2"
         state: started
      when: ansible_os_family== "Debian"
 
    - name: i want to install webserver on Redhat
      yum:
-        name: "{{webserveronredhat}}"
+        name: "httpd"
         state: present
      when: ansible_os_family== "RedHat"
 
    - name: i want to start webserver on Redhat
      service:
-        name: "{{webserveronredhat}}"
+        name: "httpd"
         state: started
      when: ansible_os_family== "RedHat"

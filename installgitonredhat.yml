@@ -1,5 +1,5 @@
 ---
-- hosts: 172.31.40.18
+- hosts: all
   become: yes
   tasks:
    - name: i want to install git on redhat
